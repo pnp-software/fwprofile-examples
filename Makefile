@@ -45,4 +45,4 @@ create_dir:
 	mkdir -p $(OUT)
 
 clean:
-	rm $(OUT) -rdf
+	rm $(OUT) -rf
