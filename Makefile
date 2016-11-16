@@ -1,4 +1,4 @@
-
+# Following line must stay on line 2, otherwise Release.sh will not work anymore.
 C1_DIR = ./lib/fwprofile/src
 C1_SRC = $(shell find $(C1_DIR) -name '*.c')
 C1_OBJ = $(patsubst $(C1_DIR)/%.c,$(OUT)/%.o,$(C1_SRC))
