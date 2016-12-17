@@ -17,6 +17,7 @@
  * .
  * @author Vaclav Cechticky, Alessandro Pasetti
  * @copyright P&P Software GmbH, 2011, All Rights Reserved
+ *
  */
 
 #include <stdio.h>

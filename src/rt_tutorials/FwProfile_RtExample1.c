@@ -10,6 +10,7 @@
  * notifications are separated by a 10 ms wait.
  * @author Vaclav Cechticky, Alessandro Pasetti
  * @copyright P&P Software GmbH, 2013, All Rights Reserved
+ *
  */
 
 #include <stdio.h>

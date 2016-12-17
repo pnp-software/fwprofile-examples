@@ -3,8 +3,6 @@
  *
  * This example shows how to create, configure and execute a simple
  * procedure. Procedures are best represented as UML2 activity diagrams.
- * The diagram for the procedure of this example can be found here:
- * http://fwprofile.googlecode.com/svn/wiki/images/PrExample1.png
  *
  * The procedure has: 4 action nodes, 1 decision node, 7 control flows,
  * 2 actions (each of which is used in two action nodes), and 3 guards
@@ -21,12 +19,9 @@
  * - The action of node N3 is Action1.
  * - The action of node N4 is Action2.
  * .
- * The code in this file must be compiled and linked with the
- * code of the C1 Implementation available from here:
- * http://code.google.com/p/fwprofile/downloads/list
- *
  * @author Vaclav Cechticky, Alessandro Pasetti
  * @copyright P&P Software GmbH, 2011, All Rights Reserved
+ * 
  */
 
 #include <stdio.h>

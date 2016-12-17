@@ -5,9 +5,7 @@
  * First, a base state machine is created and configured and then
  * a second state machine is derived from the first one.
  * The derived state machine overrides one action of its base state
- * machine but is otherwise a clone of its base. A diagram of the two
- * state machines and a description of this example can be found here:
- * http://fwprofile.googlecode.com/svn/wiki/images/SmExample3.png
+ * machine but is otherwise a clone of its base. 
  *
  * The base state machine has 2 states, no choice pseudo-state,
  * 3 transitions, 2 actions, and 1 guard. Its characteristics are:
@@ -19,12 +17,9 @@
  * .
  * The derived state machine overrides the exit action of S2 with Action2_Der.
  *
- * The code in this file must be compiled and linked with the
- * code of the C1 Implementation available from here:
- * http://code.google.com/p/fwprofile/downloads/list
- *
  * @author Vaclav Cechticky, Alessandro Pasetti
  * @copyright P&P Software GmbH, 2011, All Rights Reserved
+ *
  */
 
 #include <stdio.h>

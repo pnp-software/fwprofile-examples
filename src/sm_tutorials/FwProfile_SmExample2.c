@@ -3,8 +3,7 @@
  *
  * This example demonstrates the creation, configuration and use of
  * a state machine with another state machine embedded in one of its
- * states. A diagram of the example state machine can be found here:
- * http://fwprofile.googlecode.com/svn/wiki/images/SmExample2.png
+ * states. 
  *
  * The outer state machine has 2 states, 1 choice pseudo-state,
  * 5 transitions, 4 actions, and 2 guards. Its characteristics are:
@@ -29,12 +28,9 @@
  * - State ES2 with one entry action Action6.
  * - There is no final pseudo-state
  * .
- * The code in this file must be compiled and linked with the
- * code of the C1 Implementation available from here:
- * http://code.google.com/p/fwprofile/downloads/list
- *
  * @author Vaclav Cechticky, Alessandro Pasetti
  * @copyright P&P Software GmbH, 2011, All Rights Reserved
+ *
  */
 
 #include <stdio.h>
