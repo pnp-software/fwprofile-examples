@@ -19,7 +19,7 @@ SM_EXE = $(OUT)/SmExample1 $(OUT)/SmExample2 $(OUT)/SmExample3
 EXE = $(DA_EXE) $(E1_EXE) $(E2_EXE) $(RT_EXE) $(PR_EXE) $(SM_EXE)
 
 CC ?= gcc
-CFLAGS = -O0 -g3 -Wall -fmessage-length=0 -fprofile-arcs -ftest-coverage -I$(C1_DIR)
+CFLAGS = -std=c99 -O0 -g3 -Wall -fmessage-length=0 -fprofile-arcs -ftest-coverage -I$(C1_DIR)
 LFLAGS = -Wl,-fprofile-arcs
 LIBS = -lpthread
 OUT = bin
