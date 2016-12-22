@@ -1,0 +1,598 @@
+{
+     "editorVersion": "5.02",
+     "states": [
+          {
+               "id": 107,
+               "attrs": {
+                    "x": 221,
+                    "y": 184,
+                    "width": 100,
+                    "height": 100,
+                    "r": 10,
+                    "rx": 10,
+                    "ry": 10,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 1,
+                    "type": "state",
+                    "note": "",
+                    "identifier": "STATE_S1",
+                    "entryFunc": "",
+                    "doFunc": "",
+                    "exitFunc": "Action2",
+                    "entryType": "call function",
+                    "entryCode": "",
+                    "doType": "call function",
+                    "doCode": "",
+                    "exitType": "define function",
+                    "exitCode": "",
+                    "entryDesc": "",
+                    "doDesc": "",
+                    "exitDesc": "",
+                    "embedSmId": "0"
+               },
+               "selected": false
+          },
+          {
+               "id": 110,
+               "attrs": {
+                    "x": 256,
+                    "y": 23,
+                    "width": 30,
+                    "height": 30,
+                    "r": 15,
+                    "rx": 15,
+                    "ry": 15,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 1,
+                    "type": "init",
+                    "note": "Initial state"
+               },
+               "selected": false
+          },
+          {
+               "id": 111,
+               "attrs": {
+                    "x": 475,
+                    "y": 22,
+                    "width": 160,
+                    "height": 424,
+                    "r": 10,
+                    "rx": 10,
+                    "ry": 10,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 2,
+                    "type": "state",
+                    "note": "",
+                    "identifier": "STATE_S2",
+                    "entryFunc": "Action4",
+                    "doFunc": "Action3",
+                    "exitFunc": "",
+                    "entryType": "define function",
+                    "entryCode": "",
+                    "doType": "define function",
+                    "doCode": "",
+                    "exitType": "call function",
+                    "exitCode": "",
+                    "entryDesc": "",
+                    "doDesc": "",
+                    "exitDesc": "",
+                    "embedSmId": "0"
+               },
+               "selected": false
+          },
+          {
+               "id": 114,
+               "attrs": {
+                    "x": 378,
+                    "y": 219,
+                    "width": 30,
+                    "height": 30,
+                    "r": 0,
+                    "rx": 0,
+                    "ry": 0,
+                    "fill": "#ffffff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100,
+                    "transform": "r45"
+               },
+               "fwprop": {
+                    "autoid": 1,
+                    "type": "choice",
+                    "note": "Choice pseudo state",
+                    "identifier": "CPS1"
+               },
+               "selected": false
+          },
+          {
+               "id": 115,
+               "attrs": {
+                    "x": 542,
+                    "y": 511,
+                    "width": 26,
+                    "height": 26,
+                    "r": 13,
+                    "rx": 13,
+                    "ry": 13,
+                    "fill": "#000",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 1,
+                    "type": "final",
+                    "note": "Final state"
+               },
+               "selected": false
+          },
+          {
+               "id": 116,
+               "attrs": {
+                    "x": 540,
+                    "y": 110,
+                    "width": 30,
+                    "height": 30,
+                    "r": 15,
+                    "rx": 15,
+                    "ry": 15,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 2,
+                    "type": "init",
+                    "note": "Embedded initial state creates an embedded state machine."
+               },
+               "selected": false
+          },
+          {
+               "id": 117,
+               "attrs": {
+                    "x": 505,
+                    "y": 172,
+                    "width": 100,
+                    "height": 100,
+                    "r": 10,
+                    "rx": 10,
+                    "ry": 10,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 3,
+                    "type": "state",
+                    "note": "",
+                    "identifier": "STATE_ES1",
+                    "entryFunc": "Action5",
+                    "doFunc": "",
+                    "exitFunc": "",
+                    "entryType": "define function",
+                    "doType": "call function",
+                    "exitType": "call function",
+                    "entryCode": "",
+                    "doCode": "",
+                    "exitCode": "",
+                    "entryDesc": "",
+                    "doDesc": "",
+                    "exitDesc": "",
+                    "embedSmId": "0"
+               },
+               "selected": false
+          },
+          {
+               "id": 120,
+               "attrs": {
+                    "x": 505,
+                    "y": 306,
+                    "width": 100,
+                    "height": 100,
+                    "r": 10,
+                    "rx": 10,
+                    "ry": 10,
+                    "fill": "#fff",
+                    "stroke": "#666",
+                    "stroke-width": 1,
+                    "fill-opacity": 100
+               },
+               "fwprop": {
+                    "autoid": 4,
+                    "type": "state",
+                    "note": "",
+                    "identifier": "STATE_ES2",
+                    "entryFunc": "",
+                    "doFunc": "",
+                    "exitFunc": "Action6",
+                    "entryType": "call function",
+                    "doType": "call function",
+                    "exitType": "define function",
+                    "entryCode": "",
+                    "doCode": "",
+                    "exitCode": "",
+                    "entryDesc": "",
+                    "doDesc": "",
+                    "exitDesc": "",
+                    "embedSmId": "0"
+               },
+               "selected": false
+          }
+     ],
+     "connections": [
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              271,
+                              58
+                         ],
+                         [
+                              "L",
+                              271,
+                              176
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": "1",
+                    "identifier": "",
+                    "guardFunc": "",
+                    "actionFunc": "Action1",
+                    "guardType": "call function",
+                    "guardCode": "",
+                    "guardDesc": "",
+                    "actionType": "define function",
+                    "actionCode": "",
+                    "actionDesc": "",
+                    "note": ""
+               },
+               "shiftx": 29,
+               "shifty": 5,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 110,
+               "stateToID": 107,
+               "selected": false
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              326,
+                              234
+                         ],
+                         [
+                              "L",
+                              360,
+                              234
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": 1,
+                    "identifier": "Trigger1",
+                    "guardFunc": "",
+                    "actionFunc": ""
+               },
+               "shiftx": 6,
+               "shifty": -8,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 107,
+               "stateToID": 114,
+               "selected": false
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              393,
+                              264
+                         ],
+                         [
+                              "L",
+                              393,
+                              337
+                         ],
+                         [
+                              "L",
+                              271,
+                              337
+                         ],
+                         [
+                              "L",
+                              271,
+                              292
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": "1",
+                    "identifier": "",
+                    "guardFunc": "Guard1",
+                    "actionFunc": "",
+                    "guardType": "define function",
+                    "guardCode": "",
+                    "guardDesc": "",
+                    "actionType": "call function",
+                    "actionCode": "",
+                    "actionDesc": "",
+                    "note": ""
+               },
+               "shiftx": -12,
+               "shifty": 24,
+               "vertexes": [
+                    {
+                         "x": 393,
+                         "y": 337,
+                         "hasMoved": true
+                    },
+                    {
+                         "x": 271,
+                         "y": 337,
+                         "hasMoved": true
+                    }
+               ],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 114,
+               "stateToID": 107,
+               "selected": false
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              423,
+                              234
+                         ],
+                         [
+                              "L",
+                              467,
+                              234
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": "2",
+                    "identifier": "",
+                    "guardFunc": "Guard2",
+                    "actionFunc": "",
+                    "guardType": "else",
+                    "guardCode": "",
+                    "guardDesc": "",
+                    "actionType": "call function",
+                    "actionCode": "",
+                    "actionDesc": "",
+                    "note": ""
+               },
+               "shiftx": -6,
+               "shifty": -8,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 114,
+               "stateToID": 111,
+               "selected": false
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "red",
+                    "path": [
+                         [
+                              "M",
+                              555,
+                              451
+                         ],
+                         [
+                              "L",
+                              555,
+                              503
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": "1",
+                    "identifier": "Trigger2",
+                    "guardFunc": "Guard2",
+                    "actionFunc": "Action2",
+                    "guardType": "define function",
+                    "guardCode": "",
+                    "actionType": "call function",
+                    "actionCode": "",
+                    "note": "",
+                    "guardDesc": "",
+                    "actionDesc": ""
+               },
+               "shiftx": -78,
+               "shifty": 12,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 111,
+               "stateToID": 115,
+               "selected": true
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              555,
+                              277
+                         ],
+                         [
+                              "L",
+                              555,
+                              298
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": 1,
+                    "identifier": "Trigger3",
+                    "guardFunc": "",
+                    "actionFunc": "",
+                    "guardType": "call function",
+                    "actionType": "call function",
+                    "guardCode": "",
+                    "actionCode": ""
+               },
+               "shiftx": -29,
+               "shifty": 12,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 117,
+               "stateToID": 120,
+               "selected": false
+          },
+          {
+               "attrs": {
+                    "fill": "none",
+                    "stroke": "#000",
+                    "path": [
+                         [
+                              "M",
+                              555,
+                              145
+                         ],
+                         [
+                              "L",
+                              555,
+                              164
+                         ]
+                    ],
+                    "stroke-width": 2,
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-dasharray": ""
+               },
+               "fwprop": {
+                    "order": "1",
+                    "identifier": "",
+                    "guardFunc": "",
+                    "actionFunc": "",
+                    "guardType": "call function",
+                    "actionType": "call function",
+                    "guardCode": "",
+                    "actionCode": "",
+                    "note": ""
+               },
+               "shiftx": 0,
+               "shifty": 0,
+               "vertexes": [],
+               "shiftxy": {
+                    "x": 0,
+                    "y": 0
+               },
+               "stateFromID": 116,
+               "stateToID": 117,
+               "selected": false
+          }
+     ],
+     "globals": {
+          "paperPanX": 58,
+          "paperPanY": -58,
+          "attrs": {
+               "x": 58,
+               "y": -58,
+               "width": 1855,
+               "height": 1061,
+               "r": 0,
+               "rx": 0,
+               "ry": 0,
+               "fill": "#eee",
+               "stroke": "#000",
+               "stroke-width": 0
+          },
+          "fwprop": {
+               "globalvar": [
+                    {
+                         "type": "int",
+                         "name": "",
+                         "value": ""
+                    }
+               ],
+               "smName": "Example 2",
+               "editorType": "Sm",
+               "smIncludes": "",
+               "smNotes": "",
+               "memalloc": "direct",
+               "displayInfo": 0,
+               "displayOrder": 1,
+               "smTags": "example"
+          }
+     }
+}

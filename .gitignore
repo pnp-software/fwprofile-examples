@@ -3,6 +3,8 @@
 *.ko
 *.obj
 *.elf
+*.gcno
+*.gcda
 
 # Precompiled Headers
 *.gch
@@ -34,3 +36,6 @@
 
 # EMacs Editor
 *~
+
+# Executable output directory
+bin/

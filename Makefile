@@ -1,58 +1,59 @@
 # Following line must stay on line 2, otherwise Release.sh will not work anymore.
 C1_DIR = ./lib/fwprofile/src
-C1_SRC = $(shell find $(C1_DIR) -name '*.c')
-C1_OBJ = $(patsubst $(C1_DIR)/%.c,$(OUT)/%.o,$(C1_SRC))
-
-DA_DIR = ./src/app
-DA_SRC = $(shell find $(DA_DIR) -name 'FwDa*.c')
-DA_OBJ = $(patsubst $(DA_DIR)/%c,$(OUT)/%o,$(DA_SRC))
+C1_SRC_SM = $(shell find $(C1_DIR) -name 'FwSm*.c')
+C1_SRC_PR = $(shell find $(C1_DIR) -name 'FwPr*.c')
+C1_SRC_RT = $(shell find $(C1_DIR) -name 'FwRt*.c')
+C1_SRC = $(C1_SRC_SM) $(C1_SRC_PR) $(C1_SRC_RT)
 
 PR_DIR = ./src/pr_tutorials
 RT_DIR = ./src/rt_tutorials
 SM_DIR = ./src/sm_tutorials
 
+DA_EXE = $(OUT)/sm_demo
+E1_EXE = $(OUT)/Example1
+E2_EXE = $(OUT)/Example2
+E3_EXE = $(OUT)/Example3
+RT_EXE = $(OUT)/RtExample1
+PR_EXE = $(OUT)/PrExample1
+SM_EXE = $(OUT)/SmExample1 $(OUT)/SmExample2 $(OUT)/SmExample3
+EXE = $(DA_EXE) $(E1_EXE) $(E2_EXE) $(RT_EXE) $(PR_EXE) $(SM_EXE)
+
 CC ?= gcc
-CFLAGS = -O0 -g3 -Wall -c -fmessage-length=0 -fprofile-arcs -ftest-coverage -I$(C1_DIR)
-LFLAGS = -fprofile-arcs
+CFLAGS = -O0 -g3 -Wall -fmessage-length=0 -fprofile-arcs -ftest-coverage -I$(C1_DIR)
+LFLAGS = -Wl,-fprofile-arcs
 LIBS = -lpthread
 OUT = bin
 
-.PHONY: all create_dir clean C1 run-all
+.PHONY: all create_dir clean run-all
 
-all: create_dir C1 $(OUT)/sm_demo $(OUT)/RtExample1 $(OUT)/PrExample1 $(OUT)/SmExample1 $(OUT)/SmExample2 $(OUT)/SmExample3
+all: clean $(EXE)
 
 run-all:
-	./$(OUT)/sm_demo
-	./$(OUT)/RtExample1
-	./$(OUT)/PrExample1
-	./$(OUT)/SmExample1
-	./$(OUT)/SmExample2
-	./$(OUT)/SmExample3
+	$(patsubst %,./%;,$(EXE))
 
-C1: $(C1_OBJ)
+$(DA_EXE): create_dir $(shell find ./src/app -name 'FwDa*.c') $(C1_SRC)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^) $(LIBS)
 
-$(OUT)/%: bin/FwProfile_%.o $(C1_OBJ)
-	$(CC) $(LFLAGS) -o $@ $? $(LIBS)
+$(E1_EXE): create_dir $(shell find ./src/Example1/ -name '*.c') $(C1_SRC_SM)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^)
 
-$(OUT)/sm_demo: $(DA_OBJ) $(C1_OBJ)
-	$(CC) $(LFLAGS) -o $@ $? $(LIBS)
+$(E2_EXE): create_dir $(shell find ./src/Example2/ -name '*.c') $(C1_SRC_SM)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^)
 
-$(OUT)/%.o: $(SM_DIR)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
+$(E3_EXE): create_dir $(shell find ./src/Example3/ -name '*.c') $(C1_SRC_PR)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^)	
 
-$(OUT)/%.o: $(RT_DIR)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
+$(RT_EXE): $(OUT)/%: create_dir $(RT_DIR)/FwProfile_%.c $(C1_SRC_RT)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^) $(LIBS)
 
-$(OUT)/%.o: $(PR_DIR)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
+$(PR_EXE): $(OUT)/%: create_dir $(PR_DIR)/FwProfile_%.c $(C1_SRC_PR)	
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^)
 
-$(OUT)/%.o: $(DA_DIR)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
+$(SM_EXE): $(OUT)/%: create_dir $(SM_DIR)/FwProfile_%.c $(C1_SRC_SM)
+	$(CC) $(CFLAGS) -o $@ $(filter-out $<,$^)
 
-$(OUT)/%.o: $(C1_DIR)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-print-%: ; @echo $*=$($*)
+print-%:
+	@echo $*=$($*)
 
 create_dir:
 	mkdir -p $(OUT)
